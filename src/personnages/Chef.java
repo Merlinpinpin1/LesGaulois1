@@ -4,7 +4,7 @@ import lieux.Village;
 
 public class Chef
 {
-	
+	 
 		 private String nom;
 		 private int force;
 		 private int effetpotion = 1;
