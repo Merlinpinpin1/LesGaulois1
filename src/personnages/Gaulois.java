@@ -12,6 +12,7 @@ public class Gaulois {
 		this.force = force;
 	}
 
+	
 	public String getNom() {
 		return nom;
 	}

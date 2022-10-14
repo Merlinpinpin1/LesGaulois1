@@ -9,6 +9,7 @@ public class Romain
 
 	public Romain(String nom, int force) {
 		this.nom = nom;
+		
 		this.force = force;
 	}
 

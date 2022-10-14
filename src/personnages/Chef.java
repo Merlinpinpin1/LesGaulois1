@@ -16,7 +16,9 @@ public class Chef
 			 this.force = force;
 			 this.effetpotion = effetpotion;
 			 this.village = village;
+			 
 		 }
+		 
 		 
 		 
 		 public String getNom() 

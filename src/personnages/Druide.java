@@ -20,6 +20,7 @@ public class Druide {
 	
 	public String getNom() {
 		return nom;
+		
 	}
 
 	public void parler(String texte) {
