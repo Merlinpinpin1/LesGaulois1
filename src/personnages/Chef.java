@@ -18,6 +18,7 @@ public class Chef
 			 this.village = village;
 		 }
 		 
+		 
 		 public String getNom() 
 		 
 		 {

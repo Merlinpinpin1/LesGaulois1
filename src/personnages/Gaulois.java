@@ -34,6 +34,7 @@ public class Gaulois {
 
 		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetpotion + "]";
 
+		
 	}
 
 	public static void main(String[] args) {
