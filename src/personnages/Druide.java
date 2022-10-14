@@ -1,31 +1,47 @@
 package personnages;
 
-public class Druide 
-{ 
+import java.util.Random;
+
+public class Druide {
 	private String nom;
 	private int effetPotionMin;
 	private int effetPotionMax;
-	
-	public Druide(String nom, int effetPotionMin, int effetPotionMax) 
-	{
+	private int forcepotion = 1;
+
+	public Druide(String nom, int effetPotionMin, int effetPotionMax) {
 		this.nom = nom;
 		this.effetPotionMin = effetPotionMin;
 		this.effetPotionMax = effetPotionMax;
-		parler ("Bonjour, je suis le druide " + nom + " et ma potion peut aller d'une force " + effetPotionMin + " à "+ effetPotionMax + ".");
+		parler("Bonjour, je suis le druide " + nom + " et ma potion peut aller d'une force " + effetPotionMin + " à "
+				+ effetPotionMax + ".");
 	}
-	
-	public String getNom()
-	{
+
+	public String getNom() {
 		return nom;
 	}
-	
-	public void parler(String texte)
-	{
+
+	public void parler(String texte) {
 		System.out.println(prendreParole() + "« " + texte + "»");
 	}
-	
-	private String prendreParole()
-	{
+
+	public void preparerpotion() {
+		Random random = new Random();
+		int force = random.nextInt(effetPotionMax - effetPotionMin) + effetPotionMin;
+		if (force > 7) {
+			System.out.println("J'ai préparé une super potion de force " + force);
+		} else {
+			System.out.println(
+					"Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de niveau inférieur " + force);
+		}
+	}
+
+	private String prendreParole() {
 		return "Le druide " + nom + " : ";
+	}
+
+	public static void main(String[] args) {
+		Druide Panoramix;
+		Panoramix = new Druide("Panoramix", 5, 10);
+		Panoramix.preparerpotion();
 	}
 }
