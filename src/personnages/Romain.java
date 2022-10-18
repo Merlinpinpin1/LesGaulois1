@@ -44,11 +44,16 @@ public class Romain
 		}
 	}
 
-	public void sEquiper(Equipement[] equipement) {
-		switch (equipement) {
-		case nbEquipement = 2:
+	public void sEquiper(Equipement equipement1) {
+		switch (nbEquipement) {
+		case 2:
 			System.out.println("Le soldat" + Romain.getNom() + "est déjà bien protégé !");
-		case nbEquipement = 1:
+			break ;
+		case 1  :
+			System.out.println("Le soldat" + Romain.getNom() + "possède déja " + equipement);
+			break ;
+		case 0 :
+			System.out.println("Le soldat" + Romain.getNom() + "s’équipe avec un » " + equipement);
 
 		}
 	}
