@@ -6,11 +6,13 @@ public class Romain
 
 	private String nom;
 	private int force;
+	private Equipement[] equipement;
+	private int nbEquipement;
 
 	public Romain(String nom, int force) {
 		this.nom = nom;
-		
 		this.force = force;
+		
 	}
 
 	public static void main(String[] args) {
@@ -24,7 +26,6 @@ public class Romain
 	public String getNom() {
 		return nom;
 	}
-	
 
 	public void parler(String texte) {
 		System.out.println(prendreParole() + "« " + texte + "»");
@@ -40,6 +41,15 @@ public class Romain
 			parler("Aïe");
 		} else {
 			parler("J'abandonne...");
+		}
+	}
+
+	public void sEquiper(Equipement[] equipement) {
+		switch (equipement) {
+		case nbEquipement = 2:
+			System.out.println("Le soldat" + Romain.getNom() + "est déjà bien protégé !");
+		case nbEquipement = 1:
+
 		}
 	}
 
