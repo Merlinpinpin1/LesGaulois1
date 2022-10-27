@@ -2,10 +2,11 @@ package personnages;
 
 public class Gaulois {
 	// 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
-	private int force, nb_trophees;
+	private int force ;
+	private int nbtrophees;
 	private Equipement trophees[] = new Equipement[100];
 	private String nom;
-	private int force;
+
 	private int effetpotion = 1;
 
 	public Gaulois(String nom, int force) {
@@ -30,8 +31,8 @@ public class Gaulois {
 
 	private String prendreParole()
 	 {
-		 	String texte = "Le gaulois " + nom + " : ";
-			return texte;
+		 	return  "Le gaulois " + nom + " : " ;
+	
 }
 
 
@@ -42,13 +43,12 @@ public class Gaulois {
 
 	public void frapper(Romain romain)
 	{
-		System.out.println(nom + " envoie un grand coup dans la
-		mâchoire de " + romain.getNom());
-		Equipement trophees[] = romain.recevoirCoup((force / 3) * effetPotion);
-		for (int i = 0; trophees != null && i < trophees.length; i++,	nb_trophees++) {
-			this.trophees[nb_trophees] = trophees[i];
+		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
+		Equipement trophees[] = romain.recevoirCoup((force / 3) * effetpotion);
+		for (int i = 0; trophees != null && i < trophees.length; i++,	nbtrophees++) {
+			this.trophees[nbtrophees] = trophees[i];
 		}
-	return;
+
 	}
 
 
@@ -61,14 +61,21 @@ public class Gaulois {
 
 	public static void main(String[] args) {
 		Gaulois asterix;
-		Romain c�sar;
+		Romain cesar;
 		asterix = new Gaulois("Ast�rix", 8);
-		c�sar = new Romain("c�sar", 5);
+		cesar = new Romain("cesar", 5);
 
 		System.out.println(asterix.getNom());
 		System.out.println(asterix);
 		System.out.println(asterix.prendreParole());
-		asterix.frapper(c�sar);
+		asterix.frapper(cesar);
 	}
+	 public void boirePotion (int forcedelapotion)
+	 {
+		 effetpotion = forcedelapotion ; 
+		 System.out.println(" Merci Druide, je sens que ma force est " + effetpotion +" fois décuplée. ") ; 
+	 }
+	 
+	 
 
 }
